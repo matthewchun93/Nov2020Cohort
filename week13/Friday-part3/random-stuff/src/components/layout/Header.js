@@ -16,38 +16,36 @@ const Header = () => {
       <li className="nav-item active">
         <Link className="nav-link" to="/">Home <span className="sr-only">(current)</span></Link>
       </li>
-      <li className="nav-item">
-        <Link className="nav-link" to="/">Home</Link>
-      </li>
+     
       <li className="nav-item">
         <Link className="nav-link" to="/adjustments">Adjustments</Link>
       </li>
       <li className="nav-item">
-        <Link className="nav-link disabled" to="/animate" tabindex="-1" aria-disabled="true">As</Link>
+        <Link className="nav-link" to="/animate" tabindex="-1" aria-disabled="true">As</Link>
       </li>
       <li className="nav-item">
-        <Link className="nav-link disabled" to="/attrs" tabindex="-1" aria-disabled="true">Attrs</Link>
+        <Link className="nav-link" to="/attrs" tabindex="-1" aria-disabled="true">Attrs</Link>
       </li>
       <li className="nav-item">
-        <Link className="nav-link disabled" to="/basic" tabindex="-1" aria-disabled="true">Basic</Link>
+        <Link className="nav-link" to="/basic" tabindex="-1" aria-disabled="true">Basic</Link>
       </li>
       <li className="nav-item">
-        <Link className="nav-link disabled" to="/bootstrapbutton" tabindex="-1" aria-disabled="true">Boostrap Button</Link>
+        <Link className="nav-link" to="/bootstrapbutton" tabindex="-1" aria-disabled="true">Boostrap Button</Link>
       </li>
       <li className="nav-item">
-        <Link className="nav-link disabled" to="/complex" tabindex="-1" aria-disabled="true">Complex</Link>
+        <Link className="nav-link" to="/complex" tabindex="-1" aria-disabled="true">Complex</Link>
       </li>
       <li className="nav-item">
-        <Link className="nav-link disabled" to="/globalstyles" tabindex="-1" aria-disabled="true">Global Styles</Link>
+        <Link className="nav-link" to="/globalstyles" tabindex="-1" aria-disabled="true">Global Styles</Link>
       </li>
       <li className="nav-item">
-        <Link className="nav-link disabled" to="/pseudo" tabindex="-1" aria-disabled="true">Pseudo</Link>
+        <Link className="nav-link" to="/pseudo" tabindex="-1" aria-disabled="true">Pseudo</Link>
       </li>
       <li className="nav-item">
-        <Link className="nav-link disabled" to="/theme" tabindex="-1" aria-disabled="true">Theme</Link>
+        <Link className="nav-link" to="/theme" tabindex="-1" aria-disabled="true">Theme</Link>
       </li>
       <li className="nav-item">
-        <Link className="nav-link disabled" to="/condrendering" tabindex="-1" aria-disabled="true">Conditional Rendering</Link>
+        <Link className="nav-link" to="/condrendering" tabindex="-1" aria-disabled="true">Conditional Rendering</Link>
       </li>
     </ul>
   </div>
