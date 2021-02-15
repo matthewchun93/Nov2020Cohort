@@ -1,6 +1,7 @@
 let initialState = {
   count: 50,
-  title: 'Counter App'
+  title: 'Counter App',
+  persons: []
 };
 
 const counterReducer = (state, action) => {
@@ -19,6 +20,10 @@ const counterReducer = (state, action) => {
         ...state,
         count: state.count - 1,
       };
+    case "AddPerson":
+      return {
+
+      }
     default:
       return state;
   }

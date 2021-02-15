@@ -26,16 +26,27 @@ class App extends Component {
   //     count: this.state.count - 1
   //   })
   // }
-  
+
+  handleCount = () => {
+    //udpate global and local state
+
+    this.setState({
+      count: this.state.count + 5
+    })
+
+    this.props.onIncreaseClick();
+  }
   
   render() {
     return (
       <>
         <h1>{this.props.title}</h1>
 
-        <h1>{this.props.counter}</h1>
+        <h1>Global: {this.props.counter}</h1>
 
-        <button onClick={this.props.onIncreaseClick}>Increase</button>
+        <h1>Local: {this.state.count}</h1>
+
+        <button onClick={this.handleCount}>Increase</button>
         <button onClick={this.props.onDecreaseClick}>Decrease</button>
       </>
     )
