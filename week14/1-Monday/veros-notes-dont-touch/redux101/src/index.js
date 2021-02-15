@@ -9,6 +9,7 @@ import {
 
 import reducer from './reducers/counterReducer';
 import App from './App';
+import ViewCount from './components/ViewCount'
 import BaseLayout from './components/layout/BaseLayout'
 
 let store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()) //reducer
@@ -19,7 +20,8 @@ ReactDOM.render(
       <Router>
         <BaseLayout>
           <Switch>
-            <Route path='/' component={App}/>
+            <Route exact path='/' component={App}/>
+            <Route path='/count' component={ViewCount}/>
           </Switch>
         </BaseLayout>
       </Router>

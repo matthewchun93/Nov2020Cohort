@@ -5,7 +5,8 @@ const BaseLayout = (props) => {
   return (
     <>
       <Link to="/">Home</Link>
-
+      <Link to="/count">View Count</Link>
+        <br /> <br />
       {props.children}
     </>
   );
