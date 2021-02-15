@@ -20,10 +20,21 @@ const counterReducer = (state, action) => {
         ...state,
         count: state.count - 1,
       };
-    case "AddPerson":
+    case "ADD_PERSON":
+     
       return {
-
+        ...state, 
+        persons: [...state.persons, action.data]
       }
+
+    case "REMOVE_PERSON":
+     console.log('inside of remove person reducer', action.data);
+      return {
+        ...state, 
+        persons: state.persons.filter(person => action.data !== person.firstName )
+      }
+
+
     default:
       return state;
   }

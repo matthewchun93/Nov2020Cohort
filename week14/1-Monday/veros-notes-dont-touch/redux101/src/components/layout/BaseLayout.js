@@ -8,6 +8,7 @@ const BaseLayout = (props) => {
       <Link to="/count">View Count</Link>&nbsp;&nbsp;
       <Link to="/count_hooks">Count Hooks</Link>&nbsp;&nbsp;
       <Link to="/count_view_hooks">View Count Hooks</Link> &nbsp;&nbsp;
+      <Link to="/forms">Forms</Link> &nbsp;&nbsp;
         <br /> <br />
       {props.children}
     </>
