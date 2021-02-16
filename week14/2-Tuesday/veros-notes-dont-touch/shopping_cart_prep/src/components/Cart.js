@@ -14,6 +14,8 @@ class Cart extends Component {
         <div className="row">
           <div className="col-6 offset-3">
 
+            <AddProduct />
+            
             Total Cost: ${this.props.totalCost}
             <br />
             <ul>
@@ -25,7 +27,7 @@ class Cart extends Component {
                 );
               })}
             </ul>
-            
+
           </div>
         </div>
       </>
