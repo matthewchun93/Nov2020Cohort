@@ -1,7 +1,7 @@
 import { v1 as uuidv1 } from "uuid";
 
 const initialState = {
-  totalCost: 0,
+  totalCost: 2.50,
   cart: [
             {
                 id: uuidv1(),
