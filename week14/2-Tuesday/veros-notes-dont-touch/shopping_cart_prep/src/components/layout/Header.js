@@ -22,6 +22,9 @@ const Header = (props) => {
       <li class="nav-item">
         <Link class="nav-link" to="/products">Products</Link>
       </li>
+      <li class="nav-item">
+        <Link class="nav-link" to="/cart_hooks">Cart with Hooks</Link>
+      </li>
       
     </ul>
   </div>
