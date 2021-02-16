@@ -1,7 +1,13 @@
-import React from "react";
+import React, { Component } from 'react'
 
-const Cart = (props) => {
-  return <>Cart</>;
-};
+class Cart extends Component {
+  render() {
+    return (
+      <>
+        
+      </>
+    )
+  }
+}
 
-export default Cart;
+export default Cart
