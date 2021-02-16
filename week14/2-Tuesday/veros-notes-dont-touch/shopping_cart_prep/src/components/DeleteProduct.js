@@ -1,14 +1,24 @@
 
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import {connect} from 'react-redux';
+import {deleteProduct} from '../actions/cartActions'
 
 class DeleteProduct extends Component {
+
+    //props  product
   render() {
     return (
       <>
-        Delete Product
+        <button onClick={()=>this.props.onDelete(this.props.product)}>X</button>
       </>
     )
   }
 }
 
-export default DeleteProduct
+const mapDispatchToProps = (dispatch) => {
+    return {
+        onDelete: (product) => dispatch(deleteProduct(product))
+    }
+}
+
+export default connect(null, mapDispatchToProps)(DeleteProduct)
