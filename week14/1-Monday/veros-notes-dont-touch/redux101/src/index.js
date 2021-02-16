@@ -13,7 +13,8 @@ import ViewCount from './components/ViewCount';
 import CountHooks from './components/CountHooks';
 import ViewCountHooks from './components/ViewCountHooks'
 import Forms from './components/Forms'
-import BaseLayout from './components/layout/BaseLayout'
+import BaseLayout from './components/layout/BaseLayout';
+import Shopping from './components/Container'
 
 let store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()) //reducer
 
@@ -28,6 +29,7 @@ ReactDOM.render(
             <Route path='/count_hooks' component={CountHooks}/>
             <Route path='/count_view_hooks' component={ViewCountHooks}/>
             <Route path='/forms' component={Forms}/>
+            <Route path='/shopping' component={Shopping}/>
           </Switch>
         </BaseLayout>
       </Router>
