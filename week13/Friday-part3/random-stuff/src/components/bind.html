@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Bind, call and apply
+
+<script>
+
+    let bob = function(num, str){
+        console.log('bob', num, str, this);
+        return true;
+    } 
+    
+    let bill = {
+        name: 'Bill Murray',
+        movie: 'Lost in Translation',
+        myMethod: function(fn){
+            //fn();  //runs the function that was just passed in
+            // arguments 
+            let n = arguments[1];
+            let s = arguments[2];
+            //fn.apply(bill, [n, s] ); //fn
+            fn.call(bill, n, s ); //fn
+
+            
+        }
+    }
+
+    //bob(1, 'hello');
+
+    // bill.myMethod(bob);
+    
+    //bob.call(bill, 2, 'goodbye');
+
+    // bob.apply(bill, [2, 'goodbye'])
+
+    // bill.myMethod(bob, 4, 'ciao')
+
+    // let result = bob.bind(bill,5, 'hasta la vista' );
+
+    // result();
+
+    // let toggle = new Toggle()
+
+    // toggle.handleClick()
+
+
+</script>
+</body>
+
+</html>
