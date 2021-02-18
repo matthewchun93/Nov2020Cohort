@@ -1,0 +1,12 @@
+body{
+    background-color:rgb(190, 237, 255);
+}
+
+.button {
+    display: none;
+}
+
+.fontStyle{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
