@@ -66,7 +66,7 @@ ReactDOM.render(
     <Router>
       <BaseLayout>
           <Switch>
-            <Route exact path='/' component={App}/>
+            <Route exact path='/' component={Todo}/>
             <Route path='/todos' component={Todo}/>
           </Switch>
       </BaseLayout>

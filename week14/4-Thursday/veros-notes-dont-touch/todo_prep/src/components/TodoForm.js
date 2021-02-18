@@ -23,6 +23,7 @@ const TodoForm = ({todo, editMode, pageType, }) => {
 
     editMode ? dispatch(updateTodo(todoItem)) : dispatch(addTodo(todoItem));
     
+    setTask('');
     
   }
 
@@ -46,7 +47,7 @@ const TodoForm = ({todo, editMode, pageType, }) => {
             ?
             <>
             <div className="input-group-append">
-            <button className="btn btn-outline-secondary" type="submit" id="button-addon2">Edit</button>
+            <button className="btn btn-outline-info" type="submit" id="button-addon2">Edit</button>
             </div>
             <div className="input-group-append">
             <button className="btn btn-outline-danger"
