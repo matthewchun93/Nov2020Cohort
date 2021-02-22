@@ -6,6 +6,7 @@ const HoverButton = styled.button`
   border: 0px;
   background: fuchsia;
   transition: all 300ms ease;
+  border-radius: 6px;
 
   :hover{
     background-color: pink;
