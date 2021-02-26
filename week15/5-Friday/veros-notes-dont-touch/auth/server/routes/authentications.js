@@ -9,6 +9,10 @@ router.use(express.urlencoded({ extended: false })); //scrape email and pass fro
 router.use(express.json());
 
 const jwt = require("jwt-simple"); //used to create a jwt
+const passport = require('passport');
+require('../config/passAuth'); //import all of passport auth stuff
+
+let requireSignin = passport.authenticate('local', {session: false});
 
 /**
  * This function return a jwt
@@ -28,11 +32,12 @@ router.get("/", (req, res) => {
 /**
  * logging in with credentials
  */
-router.post("/signin", (req, res) => {
+router.post("/signin", requireSignin, (req, res) => {
   //validate user
 
   //send token
-  res.send("token");
+  
+  res.json({token: token(req.user)})
 });
 
 /**
@@ -61,7 +66,7 @@ router.post("/signup", async (req, res) => {
     } else {
       //send back an error
 
-      return res.status(422).send({error: 'Email already exists'})
+      return res.status(422).send({error: 'Email already exists'});
     }
   } catch (error) {
       //send back error, can't access database
