@@ -70,8 +70,29 @@ let localLogin = new LocalStrategy(options, async (email, password, done)=>{
  * jwt strategy
  * validating token
  */
-// let jwtLogin = new JwtStrategy();
+let jwtOptions = {
+    jwtFromRequest: ExtractJwt.fromHeader('authorization'),
+    secretOrKey: config.secret
+}
+let jwtLogin = new JwtStrategy(jwtOptions, async (payload, done)=>{
+
+    try{
+        let user = await db.user.findByPk(payload.sub);
+        if(user){
+            //success
+            done(null, user);
+        }
+        else {
+            //didn't find the user 
+            done(null, false)
+        }
+    }
+    catch(error){
+        return done(error)
+    }
+
+});
 
 
 passport.use(localLogin);
-// passport.use(jwtLogin)
+passport.use(jwtLogin)

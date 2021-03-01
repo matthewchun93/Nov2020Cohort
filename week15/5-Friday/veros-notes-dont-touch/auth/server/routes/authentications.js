@@ -13,6 +13,7 @@ const passport = require('passport');
 require('../config/passAuth'); //import all of passport auth stuff
 
 let requireSignin = passport.authenticate('local', {session: false});
+let requireAuth = passport.authenticate('jwt', {session: false});
 
 /**
  * This function return a jwt
@@ -25,7 +26,7 @@ const token = (user) => {
 }
 
 
-router.get("/", (req, res) => {
+router.get("/", requireAuth, (req, res) => {
   res.send("hello world");
 });
 
@@ -44,6 +45,8 @@ router.post("/signin", requireSignin, (req, res) => {
  * registering a new user in our database and send back a jwt
  */
 router.post("/signup", async (req, res) => {
+
+  console.log('signup');
   //body-parse to scrape info
   //email, password
   let email = req.body.email;
