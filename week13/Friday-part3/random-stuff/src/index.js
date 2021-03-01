@@ -15,14 +15,11 @@ import  PseudoSelectors from './components/styledComponents/PseudoSelectors'
 import  Theme from './components/styledComponents/Theme';
 
 
-
 import BaseLayout from './components/layout/BaseLayout'
 import {
   BrowserRouter as Router,
   Route, Switch
 } from 'react-router-dom'
-
-
 
 ReactDOM.render(
   <React.StrictMode>

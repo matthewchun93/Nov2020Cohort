@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.5/redux.min.js"></script>
+    <script>
+
+        //action 
+
+        const increment = () => {
+
+            return {
+                type: "INCREMENT"
+            }
+        }
+
+        const decrement = () => {
+
+            return {
+                type: "DECREMENT"
+            }
+        }
+
+
+        //reducer -  update the global state
+
+        //init stte
+
+        let intialState = {
+            greeting: "hello",
+            count: 0
+        }
+
+        //{type: value}
+        const reducer = (state = intialState, action) => {
+
+
+            switch (action.type) {
+                case "INCREMENT":
+                    return {
+                        ...state,
+                        count: state.count + 1
+                    }
+                case "DECREMENT":
+                    return {
+                        ...state,
+                        count: state.count - 1
+                    }
+
+                default:
+                    return state;
+            }
+
+            return state
+        }
+
+
+        let store = Redux.createStore(reducer) //pass redcuer
+
+        let showState = () => {
+            console.log(store.getState())
+        }
+
+        store.subscribe(showState)
+
+        store.dispatch(increment());
+        store.dispatch(increment());
+        store.dispatch(decrement());
+
+    </script>
+</body>
+
+</html>
